@@ -1,0 +1,25 @@
+<% if flash[:my_errors] %>
+    <%= flash[:my_errors] %>
+<% end %>
+
+
+
+
+<%= form_for @artist do |f| %>
+    <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    </li>
+
+    <li>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    </li>
+
+    <li>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    </li>
+
+    <%= f.submit %>
+<% end %>
